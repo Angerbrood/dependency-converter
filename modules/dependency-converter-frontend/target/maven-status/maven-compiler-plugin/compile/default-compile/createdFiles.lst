@@ -1,0 +1,11 @@
+edu/elte/dependencyconverter/backend/config/WebConfig.class
+edu/elte/dependencyconverter/backend/controller/GradleController.class
+edu/elte/dependencyconverter/backend/dto/MavenDto.class
+edu/elte/dependencyconverter/backend/controller/RootController.class
+edu/elte/dependencyconverter/backend/form/view/MavenFormView.class
+edu/elte/dependencyconverter/backend/dto/GradleResult.class
+edu/elte/dependencyconverter/backend/config/DispatcherConfig.class
+edu/elte/dependencyconverter/backend/utils/FileUtils.class
+edu/elte/dependencyconverter/backend/controller/MavenController.class
+edu/elte/dependencyconverter/backend/config/ServiceConfig.class
+edu/elte/dependencyconverter/backend/config/AppConfig.class

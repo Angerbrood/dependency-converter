@@ -1,0 +1,33 @@
+group = 'com.bmuschko'
+artifact = 'bmuschko'
+version = '2.3.1'
+
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.11'
+    compile "org.jenkins-ci.plugins:job-dsl-core:${jobDslVersion}"
+
+    testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
+    testCompile 'cglib:cglib-nodep:2.2.2' // used by Spock
+
+    // Job DSL plugin including plugin dependencies
+    testCompile "org.jenkins-ci.plugins:job-dsl:${jobDslVersion}"
+    testCompile "org.jenkins-ci.plugins:job-dsl:${jobDslVersion}@jar"
+    testCompile 'org.jenkins-ci.plugins:structs:1.13@jar'
+    testCompile 'org.jenkins-ci.plugins:cloudbees-folder:5.12@jar'
+
+    // plugins to install in test instance
+    testPlugins 'org.jenkins-ci.plugins:ghprb:1.31.4'
+    testPlugins 'com.coravy.hudson.plugins.github:github:1.19.0'
+    testPlugins 'org.jenkins-ci.plugins:cloudbees-folder:5.12'
+    testPlugins 'org.jenkins-ci.plugins:credentials:2.1.10'
+
+    // plugins used for auto-generated DSL. See example 9.
+    testPlugins 'org.jenkins-ci.plugins:cvs:2.13'
+    testPlugins 'org.jenkins-ci.plugins.workflow:workflow-cps-global-lib:2.7'
+}

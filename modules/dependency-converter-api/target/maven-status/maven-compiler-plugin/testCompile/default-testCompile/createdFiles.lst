@@ -1,0 +1,9 @@
+edu/elte/dependecy_converter/dependecy_converter/reader/maven/MavenFileReaderTest.class
+edu/elte/dependecy_converter/dependecy_converter/reader/gradle/GradleRepositoryReaderTest.class
+edu/elte/dependecy_converter/dependecy_converter/reader/gradle/GradleDependencyReaderTest.class
+edu/elte/dependecy_converter/dependecy_converter/reader/maven/MavenProjectReaderTest.class
+edu/elte/dependecy_converter/dependecy_converter/reader/maven/MavenPropertyReaderTest.class
+edu/elte/dependecy_converter/dependecy_converter/reader/gradle/GradleFileReaderTest.class
+edu/elte/dependecy_converter/dependecy_converter/reader/TestInputReader.class
+edu/elte/dependecy_converter/dependecy_converter/reader/gradle/GradleProjectReaderTest.class
+edu/elte/dependecy_converter/dependecy_converter/reader/maven/MavenDependencyReaderTest.class

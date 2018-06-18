@@ -1,0 +1,90 @@
+group = 'com.bmuschko'
+artifact = 'bmuschko'
+version = '2.3.1'
+
+apply plugin: 'groovy'
+apply plugin: 'idea'
+apply plugin: 'maven-publish'
+apply plugin: 'com.jfrog.bintray'
+
+sourceSets {
+    jobs {
+        groovy {
+            srcDirs 'src/jobs'
+            compileClasspath += main.compileClasspath
+        }
+        compileClasspath += sourceSets.main.output
+        runtimeClasspath += sourceSets.main.output
+    }
+}
+
+
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+configurations {
+    testPlugins {}
+}
+
+// Exclude buggy Xalan dependency this way the JRE default TransformerFactory is used
+// The xalan pulled in by htmlunit does not properly deal with spaces folder / job names
+configurations.all*.exclude group: 'xalan'
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.11'
+    compile "org.jenkins-ci.plugins:job-dsl-core:${jobDslVersion}"
+
+    testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
+    testCompile 'cglib:cglib-nodep:2.2.2' // used by Spock
+
+    // Job DSL plugin including plugin dependencies
+    testCompile "org.jenkins-ci.plugins:job-dsl:${jobDslVersion}"
+    testCompile "org.jenkins-ci.plugins:job-dsl:${jobDslVersion}@jar"
+    testCompile 'org.jenkins-ci.plugins:structs:1.13@jar'
+    testCompile 'org.jenkins-ci.plugins:cloudbees-folder:5.12@jar'
+
+    // plugins to install in test instance
+    testPlugins 'org.jenkins-ci.plugins:ghprb:1.31.4'
+    testPlugins 'com.coravy.hudson.plugins.github:github:1.19.0'
+    testPlugins 'org.jenkins-ci.plugins:cloudbees-folder:5.12'
+    testPlugins 'org.jenkins-ci.plugins:credentials:2.1.10'
+
+    // plugins used for auto-generated DSL. See example 9.
+    testPlugins 'org.jenkins-ci.plugins:cvs:2.13'
+    testPlugins 'org.jenkins-ci.plugins.workflow:workflow-cps-global-lib:2.7'
+}
+
+task resolveTestPlugins(type: Copy) {
+    from configurations.testPlugins
+    into new File(sourceSets.test.output.resourcesDir, 'test-dependencies')
+    include '*.hpi'
+    include '*.jpi'
+    def mapping = [:]
+
+    doFirst {
+        configurations.testPlugins.resolvedConfiguration.resolvedArtifacts.each {
+            mapping[it.file.name] = "${it.name}.${it.extension}"
+        }
+    }
+    rename { mapping[it] }
+
+    doLast {
+        List<String> baseNames = source*.name.collect { mapping[it] }.collect { it[0..it.lastIndexOf('.') - 1] }
+        new File(destinationDir, 'index').setText(baseNames.join('\n'), 'UTF-8')
+    }
+}
+
+test {
+    dependsOn tasks.resolveTestPlugins
+    inputs.files sourceSets.jobs.groovy.srcDirs
+
+    // set build directory for Jenkins test harness, JENKINS-26331
+    systemProperty 'buildDirectory', project.buildDir.absolutePath
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.9'
+}

@@ -1,0 +1,9 @@
+/home/angerbrood/Projects/dependency-converter-root/modules/dependency-converter-api/src/test/java/edu/elte/dependecy_converter/dependecy_converter/reader/gradle/GradleProjectReaderTest.java
+/home/angerbrood/Projects/dependency-converter-root/modules/dependency-converter-api/src/test/java/edu/elte/dependecy_converter/dependecy_converter/reader/maven/MavenDependencyReaderTest.java
+/home/angerbrood/Projects/dependency-converter-root/modules/dependency-converter-api/src/test/java/edu/elte/dependecy_converter/dependecy_converter/reader/maven/MavenProjectReaderTest.java
+/home/angerbrood/Projects/dependency-converter-root/modules/dependency-converter-api/src/test/java/edu/elte/dependecy_converter/dependecy_converter/reader/gradle/GradleFileReaderTest.java
+/home/angerbrood/Projects/dependency-converter-root/modules/dependency-converter-api/src/test/java/edu/elte/dependecy_converter/dependecy_converter/reader/maven/MavenPropertyReaderTest.java
+/home/angerbrood/Projects/dependency-converter-root/modules/dependency-converter-api/src/test/java/edu/elte/dependecy_converter/dependecy_converter/reader/gradle/GradleRepositoryReaderTest.java
+/home/angerbrood/Projects/dependency-converter-root/modules/dependency-converter-api/src/test/java/edu/elte/dependecy_converter/dependecy_converter/reader/TestInputReader.java
+/home/angerbrood/Projects/dependency-converter-root/modules/dependency-converter-api/src/test/java/edu/elte/dependecy_converter/dependecy_converter/reader/maven/MavenFileReaderTest.java
+/home/angerbrood/Projects/dependency-converter-root/modules/dependency-converter-api/src/test/java/edu/elte/dependecy_converter/dependecy_converter/reader/gradle/GradleDependencyReaderTest.java
