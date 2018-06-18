@@ -1,0 +1,17 @@
+\contentsline {section}{\numberline {1}Nyilatkozatok}{2}
+\contentsline {section}{\numberline {2}El\IeC {\H o}sz\IeC {\'o}}{3}
+\contentsline {section}{\numberline {3}Bevezet\IeC {\'e}s}{4}
+\contentsline {subsection}{\numberline {3.1}C\IeC {\'e}lkit\IeC {\H u}z\IeC {\'e}sek}{4}
+\contentsline {subsection}{\numberline {3.2}\IeC {\'A}ttekint\IeC {\'e}s}{4}
+\contentsline {section}{\numberline {4}Szakirodalmi \IeC {\'a}ttekint\IeC {\'e}s}{5}
+\contentsline {subsection}{\numberline {4.1}Projekt management eszk\IeC {\"o}z}{5}
+\contentsline {subsection}{\numberline {4.2}Apache Ant}{5}
+\contentsline {subsection}{\numberline {4.3}Apache Maven}{6}
+\contentsline {subsection}{\numberline {4.4}F\IeC {\"u}gg\IeC {\H o}s\IeC {\'e}g}{7}
+\contentsline {subsection}{\numberline {4.5}Repository}{8}
+\contentsline {subsection}{\numberline {4.6}Gradle}{9}
+\contentsline {subsection}{\numberline {4.7}Java Servlet Container}{10}
+\contentsline {subsection}{\numberline {4.8}Apache Tomcat}{11}
+\contentsline {subsection}{\numberline {4.9}Streaming API for XML\IeC {\nobreakspace }(StAX)}{12}
+\contentsline {subsection}{\numberline {4.10}Spring Framework}{12}
+\contentsline {subsection}{\numberline {4.11}Boostrap}{14}
