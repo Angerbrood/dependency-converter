@@ -30,4 +30,13 @@ public class MavenDependency implements ModelInterface {
     public void setVersion(String version) {
         this.version = version;
     }
+
+    public String prettyPrint() {
+        return
+        "\t\t<dependency>\n" +
+        "\t\t\t<groupId>" + groupId + "</groupId>\n" +
+		"\t\t\t<artifactId>" + artifactId + "</artifactId>\n" +
+		"\t\t\t<version>" + version + "</version>\n" +
+        "\t\t</dependency>\n";
+    }
 }

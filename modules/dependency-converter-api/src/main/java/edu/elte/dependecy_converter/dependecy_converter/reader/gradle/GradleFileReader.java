@@ -20,6 +20,7 @@ public class GradleFileReader {
 		GradleProject gradleProject = GradleProjectReader.readProject(lines);
 		gradleProject.setDependecyList(GradleDependencyReader.readDependencies(readBlock("dependencies")));
 		gradleProject.setRepositoryList(GradleRepositoryReader.readRepositories(readBlock("repositories")));
+		gradleProject.setPluginList(GradlePluginReader.readPlugins(lines));
 		return gradleProject;	
 	}
 	

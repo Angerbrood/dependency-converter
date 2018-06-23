@@ -3,6 +3,7 @@ artifact = 'bmuschko'
 version = '2.3.1'
 
 apply plugin: 'groovy'
+apply plugin: 'war'
 apply plugin: 'idea'
 apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'

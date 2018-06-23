@@ -11,6 +11,7 @@ public final class GradleProjectTransformer {
 		result.setGroupId(gradleProject.getGroup());
 		result.setArtifactId(gradleProject.getArtifact());
 		result.setVersion(gradleProject.getVersion());
+		result.setPackaging(gradleProject.getPluginList().stream().anyMatch(currentItem -> currentItem.getName().contains("war")) ? "war" : "jar");
 		result.setDependencies(gradleProject.getDependecyList().stream().map(current -> GradleDependencyTransformer.transform(current)).collect(Collectors.toList()));
 		return result;
 	}

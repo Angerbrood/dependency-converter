@@ -17,7 +17,13 @@ public class MavenProject implements ModelInterface {
     public MavenProject() {
 
     }
-
+	public String prettyPrint() {
+    	return "\t<modelVersion>" + modelVersion + "</modelVersion>\n" +
+				"\t<groupId>" + groupId + "</groupId>\n" +
+				"\t<artifactId>" + artifactId + "</artifactId>\n" +
+				"\t<packaging>" + packaging + "</packaging>\n" +
+				"\t<version>" + version + "</version>\n";
+	}
     public boolean isReadingFinished() {
     	return groupId != null && artifactId != null && version != null && packaging != null && modelVersion != null;  
     }

@@ -1,10 +1,9 @@
-package edu.elte.dependencyconverter.backend.utils;
+package edu.elte.dependecy_converter.dependecy_converter.writer;
 
 import java.io.*;
-import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
-import java.util.UUID;
 
 public final class FileService {
 	private FileService() {}
@@ -22,5 +21,15 @@ public final class FileService {
 			result = Optional.empty();
 		}
 		return result;
+	}
+
+	public static void writeToFile(String filePath, List<String> outputLines) {
+		try (BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(filePath)))) {
+			for(String currentItem : outputLines) {
+				bufferedWriter.write(currentItem);
+			}
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
 	}
 }

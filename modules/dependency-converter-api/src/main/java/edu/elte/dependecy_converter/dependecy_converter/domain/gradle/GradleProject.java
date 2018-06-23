@@ -25,7 +25,11 @@ public class GradleProject {
     	"sourceCompatibility = " + sourceCompatibility + "\n" +
     	"targetCompatbility = " + targetCompatbility + "\n";
     }
-    
+
+    public boolean isReadingFinised() {
+        return group != null && artifact != null && version != null;
+    }
+
     public GradleProject() {
 
     }

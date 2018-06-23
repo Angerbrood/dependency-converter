@@ -14,7 +14,8 @@ public final class GradleProjectReader {
 	public static final GradleProject readProject(List<String> inputLines) {
 		Objects.requireNonNull(inputLines);
 		GradleProject result = new GradleProject();
-		for(String currentLine : inputLines) {
+		for(int i = 0; i < inputLines.size() && !result.isReadingFinised(); ++i) {
+			String currentLine = inputLines.get(i);
 			String[] splitted = currentLine.split("=");
 			if(splitted[0].contains(group)) {
 				result.setGroup(removeUnusedCharacters(splitted[1]));

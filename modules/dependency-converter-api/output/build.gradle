@@ -1,4 +1,5 @@
-apply plugin : javagroup = 'edu.elte.airlines'
+apply plugin : java
+group = 'edu.elte.airlines'
 artifact = 'elteAirlines' 
 version = '1.0.0-SNAPSHOT'
 sourceCompatibility = 1.8
