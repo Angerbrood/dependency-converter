@@ -11,25 +11,29 @@
    <title>Gradle</title>
  </head>
   <body>
-     <div th:replace="fragments/navbar.frag" />	
-     
-    <div class="content">
-      <h1 class="display-4" align="center">Convert your build.gradle to pom.xml</h1>
-      <div align="center">
-        <div class="inline-div">
-            <p align="center">build.gradle</p>
-            <textarea cols="70" rows="15" class="inline-txtarea"></textarea>
-            <br />
-            <input type="submit" class="btn btn-primary" value="Convert" />
-        </div>
-        <div class="inline-div">
-        <p align="center">pom.xml</p>
-            <textarea cols="70" rows="15" class="inline-txtarea" disabled readonly></textarea>
-            <br />
-            <input type="submit" class="btn btn-primary" value="Download" />
-        </div>
-      </div>
-    </div>
+     <div th:replace="fragments/navbar.frag" />
+
+     <div class="content">
+         <h1 class="display-4" align="center">Convert your build.gradle to pom.xml</h1>
+         <div align="center">
+             <div class="inline-div">
+                 <p align="center">build.gradlel</p>
+                 <form action="#" th:action="@{/uploadGradle}" th:object="${gradleConversationFormView}" method="POST">
+                     <textarea cols="70" rows="15" class="inline-txtarea" th:field="*{rawInputLines}"></textarea>
+                     <br />
+                     <input type="submit" class="btn btn-primary" value="Convert" />
+                 </form>
+             </div>
+             <div class="inline-div">
+                 <p align="center">pom.xml</p>
+                 <form action="#" th:object="${gradleConversationFormView}">
+                     <textarea cols="70" rows="15" class="inline-txtarea" th:field="*{rawConversationResult}" disabled readonly></textarea>
+                     <br />
+                     <input type="submit" class="btn btn-primary" value="Download" />
+                 </form>
+             </div>
+         </div>
+     </div>
 
 
 

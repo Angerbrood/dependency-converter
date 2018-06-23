@@ -21,7 +21,9 @@ public class RootController {
 	}
 	@RequestMapping(value = "/gradle", method = RequestMethod.GET)
 	public ModelAndView getGradle() {
-		return new ModelAndView("gradle");
+		ModelAndView modelAndView =  new ModelAndView("gradle");
+		modelAndView.addObject("gradleConversationFormView", new ConverterFormView());
+		return modelAndView;
 	}
 	@RequestMapping(value = "/manual", method = RequestMethod.GET)
 	public ModelAndView getManual() {

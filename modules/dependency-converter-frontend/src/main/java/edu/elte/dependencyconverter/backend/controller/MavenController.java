@@ -27,6 +27,7 @@ public class MavenController {
 		MavenFileReader mavenFileReader = new MavenFileReader();
 		MavenProject mavenProject = mavenFileReader.getProject(FileService.getFileAsBytes(mavenConversationFormView.getRawInputLines()));
 		GradleProject gradleProject = MavenProjectTransformer.transform(mavenProject);
+
 		result.setRawConversationResult(StringUtils.convertListToString(GradleProjectWriter.writeProject(gradleProject)));
 		modelAndView.addObject("mavenConversationFormView", result);
 		return modelAndView;
