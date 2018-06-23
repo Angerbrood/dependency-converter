@@ -1,16 +1,11 @@
 package edu.elte.dependencyconverter.backend.controller;
 
-import javax.enterprise.inject.New;
-
-import org.apache.taglibs.standard.lang.jstl.test.beans.PublicInterface2;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import edu.elte.dependencyconverter.backend.dto.MavenDto;
-import edu.elte.dependencyconverter.backend.form.view.MavenFormView;
+import edu.elte.dependencyconverter.backend.form.view.ConverterFormView;
 
 @Controller
 public class RootController {
@@ -21,7 +16,7 @@ public class RootController {
 	@RequestMapping(value = "/maven", method = RequestMethod.GET)
 	public ModelAndView getMaven() {
 		ModelAndView modelAndView =  new ModelAndView("maven");
-		modelAndView.addObject("mavenFormView", new MavenFormView());
+		modelAndView.addObject("mavenConversationFormView", new ConverterFormView());
 		return modelAndView;
 	}
 	@RequestMapping(value = "/gradle", method = RequestMethod.GET)

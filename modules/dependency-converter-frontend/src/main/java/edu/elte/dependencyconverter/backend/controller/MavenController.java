@@ -5,10 +5,9 @@ import edu.elte.dependecy_converter.dependecy_converter.domain.maven.MavenProjec
 import edu.elte.dependecy_converter.dependecy_converter.reader.maven.MavenFileReader;
 import edu.elte.dependecy_converter.dependecy_converter.transformer.maven.MavenProjectTransformer;
 import edu.elte.dependecy_converter.dependecy_converter.utils.StringUtils;
-import edu.elte.dependecy_converter.dependecy_converter.writer.gradle.GradleProjectWriter;
-import edu.elte.dependencyconverter.backend.dto.GradleResult;
-import edu.elte.dependencyconverter.backend.form.view.MavenFormView;
 import edu.elte.dependecy_converter.dependecy_converter.writer.FileService;
+import edu.elte.dependecy_converter.dependecy_converter.writer.gradle.GradleProjectWriter;
+import edu.elte.dependencyconverter.backend.form.view.ConverterFormView;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,18 +19,16 @@ import org.springframework.web.servlet.ModelAndView;
 public class MavenController {
 
 	@RequestMapping(value = "/uploadMaven", method = RequestMethod.POST)
-	public ModelAndView uploadMaven(@ModelAttribute("mavenFormView") MavenFormView mavenFormView) {
+	public ModelAndView uploadMaven(@ModelAttribute("mavenConversationFormView") ConverterFormView mavenConversationFormView) {
 		ModelAndView modelAndView = new ModelAndView("maven");
-		MavenFormView result = new MavenFormView();
-		result.setMavenDto(mavenFormView.getMavenDto());
+		ConverterFormView result = new ConverterFormView();
+		result.setRawInputLines(mavenConversationFormView.getRawInputLines());
 
 		MavenFileReader mavenFileReader = new MavenFileReader();
-		MavenProject mavenProject = mavenFileReader.getProject(FileService.getFileAsBytes(mavenFormView.getMavenDto().getLines()));
+		MavenProject mavenProject = mavenFileReader.getProject(FileService.getFileAsBytes(mavenConversationFormView.getRawInputLines()));
 		GradleProject gradleProject = MavenProjectTransformer.transform(mavenProject);
-		GradleResult gradleResult = new GradleResult();
-		gradleResult.setLines(StringUtils.convertListToString(GradleProjectWriter.writeProject(gradleProject)));
-		result.setGradleResult(gradleResult);
-		modelAndView.addObject("mavenFormView", result);
+		result.setRawConversationResult(StringUtils.convertListToString(GradleProjectWriter.writeProject(gradleProject)));
+		modelAndView.addObject("mavenConversationFormView", result);
 		return modelAndView;
 	}
 	

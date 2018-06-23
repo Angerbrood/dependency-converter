@@ -18,16 +18,16 @@
       <div align="center">
         <div class="inline-div">
             <p align="center">pom.xml</p>
-			<form action="#" th:action="@{/uploadMaven}" th:object="${mavenFormView.mavenDto}" method="POST">
-				<textarea cols="70" rows="15" class="inline-txtarea" th:field="*{lines}"></textarea>
+			<form action="#" th:action="@{/uploadMaven}" th:object="${mavenConversationFormView}" method="POST">
+				<textarea cols="70" rows="15" class="inline-txtarea" th:field="*{rawInputLines}"></textarea>
 	            <br />
 	            <input type="submit" class="btn btn-primary" value="Convert" />
 			</form>
         </div>
         <div class="inline-div">
         <p align="center">build.gradle</p>
-			<form action="#" th:object="${mavenFormView.gradleResult}">
-				<textarea cols="70" rows="15" class="inline-txtarea" th:field="*{lines}" disabled readonly></textarea>
+			<form action="#" th:object="${mavenConversationFormView}">
+				<textarea cols="70" rows="15" class="inline-txtarea" th:field="*{rawConversationResult}" disabled readonly></textarea>
 	            <br />
 	            <input type="submit" class="btn btn-primary" value="Download" />
 			</form>
