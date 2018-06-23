@@ -2,26 +2,21 @@ package edu.elte.dependecy_converter.dependecy_converter.reader.gradle;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 import edu.elte.dependecy_converter.dependecy_converter.domain.gradle.GradleProject;
 import edu.elte.dependecy_converter.dependecy_converter.utils.ValidatorUtils;
 
 public class GradleFileReader {
-	private final BufferedReader bufferedReader;
-	private final List<String> lines;
-	public GradleFileReader(String filePath) throws Exception {
-		Objects.requireNonNull(filePath);
-		ValidatorUtils.isFileExists(filePath);
-		bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(filePath)));
-		lines = new LinkedList<>();
-		readFile();
-	}
+	private final List<String> lines = new LinkedList<>();
 	
-	public GradleProject getProject() {
+	public GradleProject getProject(Optional<InputStream> inputStream) {
+		readGradleFile(inputStream);
 		GradleProject gradleProject = GradleProjectReader.readProject(lines);
 		gradleProject.setDependecyList(GradleDependencyReader.readDependencies(readBlock("dependencies")));
 		gradleProject.setRepositoryList(GradleRepositoryReader.readRepositories(readBlock("repositories")));
@@ -63,12 +58,15 @@ public class GradleFileReader {
 		}
 		return index;
 	}
-	private void readFile() throws Exception {
-		String line = bufferedReader.readLine();
-		while(line != null) {
-			lines.add(line);
-			line = bufferedReader.readLine();
+	private void readGradleFile(Optional<InputStream> inputStream)  {
+		try(BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream.isPresent() ? inputStream.get() : inputStream.orElseThrow(IllegalAccessError::new)))) {
+			String line = bufferedReader.readLine();
+			while(line != null) {
+				lines.add(line);
+				line = bufferedReader.readLine();
+			}
+		} catch (Exception ex) {
+			ex.printStackTrace();
 		}
-
 	}
 }

@@ -9,6 +9,7 @@ import org.junit.Test;
 import edu.elte.dependecy_converter.dependecy_converter.domain.gradle.GradleProject;
 
 public class GradleFileReaderTest {
+	/*
 	@Test(expected = RuntimeException.class)
 	public void nullFileReadFails() throws Exception {
 		new GradleFileReader(null);
@@ -38,5 +39,5 @@ public class GradleFileReaderTest {
 		assertFalse(project.getDependecyList().isEmpty());
 		assertNotNull(project.getRepositoryList());
 		assertFalse(project.getRepositoryList().isEmpty());
-	}
+	}*/
 }

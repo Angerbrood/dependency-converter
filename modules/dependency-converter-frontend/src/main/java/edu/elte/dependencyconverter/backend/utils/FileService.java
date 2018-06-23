@@ -6,8 +6,8 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.UUID;
 
-public final class FileUtils {
-	private FileUtils() {}
+public final class FileService {
+	private FileService() {}
 
 	public static Optional<InputStream> getFileAsBytes(String lines) {
 		Objects.requireNonNull(lines);

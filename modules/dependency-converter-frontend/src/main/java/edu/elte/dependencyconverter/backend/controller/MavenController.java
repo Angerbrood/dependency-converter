@@ -8,7 +8,7 @@ import edu.elte.dependecy_converter.dependecy_converter.utils.StringUtils;
 import edu.elte.dependecy_converter.dependecy_converter.writer.gradle.GradleProjectWriter;
 import edu.elte.dependencyconverter.backend.dto.GradleResult;
 import edu.elte.dependencyconverter.backend.form.view.MavenFormView;
-import edu.elte.dependencyconverter.backend.utils.FileUtils;
+import edu.elte.dependencyconverter.backend.utils.FileService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,7 +27,7 @@ public class MavenController {
 		result.setMavenDto(mavenFormView.getMavenDto());
 
 		MavenFileReader mavenFileReader = new MavenFileReader();
-		MavenProject mavenProject = mavenFileReader.getProject(FileUtils.getFileAsBytes(mavenFormView.getMavenDto().getLines()));
+		MavenProject mavenProject = mavenFileReader.getProject(FileService.getFileAsBytes(mavenFormView.getMavenDto().getLines()));
 		GradleProject gradleProject = MavenProjectTransformer.transform(mavenProject);
 		GradleResult gradleResult = new GradleResult();
 		gradleResult.setLines(StringUtils.convertListToString(GradleProjectWriter.writeProject(gradleProject)));
