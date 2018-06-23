@@ -1,37 +1,23 @@
 package edu.elte.dependecy_converter.dependecy_converter.reader.maven;
 
-import java.io.FileInputStream;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Objects;
+import edu.elte.dependecy_converter.dependecy_converter.domain.maven.MavenProject;
 
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.events.EndElement;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
-
-import edu.elte.dependecy_converter.dependecy_converter.domain.maven.MavenDependency;
-import edu.elte.dependecy_converter.dependecy_converter.domain.maven.MavenProject;
-import edu.elte.dependecy_converter.dependecy_converter.domain.maven.MavenProperty;
-import edu.elte.dependecy_converter.dependecy_converter.utils.StringUtils;
-import edu.elte.dependecy_converter.dependecy_converter.utils.ValidatorUtils;
+import java.io.InputStream;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Optional;
 
 public class MavenFileReader {
-	private final String filePath;
-	private final List<String> inputLines;
-	
-	public MavenFileReader(String path) {
-		Objects.requireNonNull(path);
-		ValidatorUtils.isFileExists(path);
-		ValidatorUtils.isFileEmpty(path);
-		filePath = path;
-		inputLines = new LinkedList<>();
-	}
-	
-	public MavenProject getProject() {
+	private final List<String> inputLines = new LinkedList<>();
+
+	public MavenProject getProject(Optional<InputStream> inputStream) {
 		try {
-			readPomFile();
+			readPomFile(inputStream);
 			MavenProject result = MavenProjectReader.readProject(inputLines);
 			result.setPropertyList(MavenPropertyReader.readProperties(inputLines));
 			result.setDependencies(MavenDependencyReader.readDependecies(inputLines));
@@ -43,9 +29,9 @@ public class MavenFileReader {
 		
 	}
 	
-	private void readPomFile() throws Exception {
+	private void readPomFile(Optional<InputStream> inputStream) throws Exception {
 		XMLInputFactory xmlInputFactory = XMLInputFactory.newInstance();
-		XMLEventReader xmlEventReader = xmlInputFactory.createXMLEventReader(new FileInputStream(filePath));
+		XMLEventReader xmlEventReader = xmlInputFactory.createXMLEventReader(inputStream.isPresent() ? inputStream.get() : inputStream.orElseThrow(IllegalAccessError::new));
     	 while(xmlEventReader.hasNext()) {
     		 XMLEvent xmlEvent = xmlEventReader.nextEvent();
     		 if(xmlEvent.isStartElement()) {

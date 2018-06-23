@@ -25,10 +25,9 @@ public class MavenController {
 		ModelAndView modelAndView = new ModelAndView("maven");
 		MavenFormView result = new MavenFormView();
 		result.setMavenDto(mavenFormView.getMavenDto());
-		
-		String tempFile = FileUtils.createFile(mavenFormView.getMavenDto().getLines());
-		MavenFileReader mavenFileReader = new MavenFileReader(tempFile);
-		MavenProject mavenProject = mavenFileReader.getProject();
+
+		MavenFileReader mavenFileReader = new MavenFileReader();
+		MavenProject mavenProject = mavenFileReader.getProject(FileUtils.getFileAsBytes(mavenFormView.getMavenDto().getLines()));
 		GradleProject gradleProject = MavenProjectTransformer.transform(mavenProject);
 		GradleResult gradleResult = new GradleResult();
 		gradleResult.setLines(StringUtils.convertListToString(GradleProjectWriter.writeProject(gradleProject)));

@@ -15,12 +15,12 @@ public class App
 
     public static void main( String[] args ) throws Exception
     {   
-    	String fileName = "input/pom.xml";
-    	MavenProject mavenProject = new MavenFileReader(fileName).getProject();
+    	/*String fileName = "input/pom.xml";
+    	MavenProject mavenProject = new MavenFileReader().getProject();
     	GradleProject gradleProject = MavenProjectTransformer.transform(mavenProject);
     	List<String> gradleProjectOutput = GradleProjectWriter.writeProject(gradleProject);
     	new GradleFileWriter("output/build.gradle").writeToFile(gradleProjectOutput);
-    	System.out.println("Done");
+    	System.out.println("Done");*/
     	
     }
 }

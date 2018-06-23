@@ -6,12 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="dependecy-converter-api" />
         <module name="dependency-converter-api" />
         <module name="dependency-converter-frontend" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="dependecy-converter-api" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
