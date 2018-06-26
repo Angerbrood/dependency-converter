@@ -7,7 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="dependecy-converter-api" />
-        <module name="dependency-converter-api" />
         <module name="dependency-converter-frontend" />
       </profile>
     </annotationProcessing>

@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/modules/dependency-converter-api" />
     <file type="web" url="file://$PROJECT_DIR$/modules/dependency-converter-frontend" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/modules/dependency-converter-api/pom.xml" />
-        <option value="$PROJECT_DIR$/modules/dependency-converter-front-end/pom.xml" />
-        <option value="$PROJECT_DIR$/modules/dependency-converter-frontend/pom.xml" />
       </list>
     </option>
   </component>
