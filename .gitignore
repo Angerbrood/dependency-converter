@@ -1,4 +1,5 @@
-/modules/.*/target/
+modules/dependency-converter-api/target/
+modules/dependency-converter-frontend/target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
