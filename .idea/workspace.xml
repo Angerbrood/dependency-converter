@@ -8,31 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3a803d68-3cf0-4bd4-89d1-5d08830f79d5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dependency-converter-api/src/main/java/edu/elte/dependecy_converter/dependecy_converter/writer/FileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/dependency-converter-api/src/main/java/edu/elte/dependecy_converter/dependecy_converter/writer/FileService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/java/edu/elte/dependencyconverter/backend/config/AppConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/java/edu/elte/dependencyconverter/backend/config/DispatcherConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/java/edu/elte/dependencyconverter/backend/config/ServiceConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/java/edu/elte/dependencyconverter/backend/config/WebConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/java/edu/elte/dependencyconverter/backend/controller/GradleController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/java/edu/elte/dependencyconverter/backend/controller/MavenController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/java/edu/elte/dependencyconverter/backend/controller/RootController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/java/edu/elte/dependencyconverter/backend/form/view/ConverterFormView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/webapp/WEB-INF/views/gradle.html" beforeDir="false" afterPath="$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/webapp/WEB-INF/views/gradle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/webapp/WEB-INF/views/maven.html" beforeDir="false" afterPath="$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/webapp/WEB-INF/views/maven.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/elte/dependencyconverter/backend/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/java/edu/elte/dependencyconverter/frontend/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/elte/dependencyconverter/backend/config/DispatcherConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/java/edu/elte/dependencyconverter/frontend/config/DispatcherConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/elte/dependencyconverter/backend/config/ServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/java/edu/elte/dependencyconverter/frontend/config/ServiceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/elte/dependencyconverter/backend/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/java/edu/elte/dependencyconverter/frontend/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/elte/dependencyconverter/backend/controller/GradleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/java/edu/elte/dependencyconverter/frontend/controller/GradleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/elte/dependencyconverter/backend/controller/MavenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/java/edu/elte/dependencyconverter/frontend/controller/MavenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/elte/dependencyconverter/backend/controller/RootController.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/java/edu/elte/dependencyconverter/frontend/controller/RootController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/elte/dependencyconverter/backend/form/view/ConverterFormView.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/java/edu/elte/dependencyconverter/frontend/form/view/ConverterFormView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/fragments/navbar.frag.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/gradle.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manual.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/maven.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/dependency-converter-api/src/main/java/edu/elte/dependecy_converter/dependecy_converter/facade/MavenFadace.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/modules/dependency-converter-frontend/target/" />
     <ignored path="$PROJECT_DIR$/modules/dependency-converter-api/target/" />
@@ -55,20 +31,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="MavenController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/java/edu/elte/dependencyconverter/frontend/controller/MavenController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+            <state relative-caret-position="3">
+              <caret line="33" column="68" lean-forward="true" selection-start-line="33" selection-start-column="68" selection-end-line="33" selection-end-column="68" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MavenController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/java/edu/elte/dependencyconverter/frontend/controller/MavenController.java">
+      <file leaf-file-name="GradlePluginReader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/dependency-converter-api/src/main/java/edu/elte/dependecy_converter/dependecy_converter/reader/gradle/GradlePluginReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="57" column="56" lean-forward="true" selection-start-line="57" selection-start-column="56" selection-end-line="57" selection-end-column="56" />
+            <state relative-caret-position="68">
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MavenDependencyTransformer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/modules/dependency-converter-api/src/main/java/edu/elte/dependecy_converter/dependecy_converter/transformer/maven/MavenDependencyTransformer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -91,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="maven.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="maven.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/webapp/WEB-INF/views/maven.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+            <state relative-caret-position="234">
+              <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -243,7 +228,31 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="dependecy_converter" type="462c0819:PsiDirectoryNode" />
+              <item name="transformer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dependency-converter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dependency-converter" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="dependency-converter-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dependecy_converter" type="462c0819:PsiDirectoryNode" />
+              <item name="transformer" type="462c0819:PsiDirectoryNode" />
+              <item name="gradle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dependency-converter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dependency-converter" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="dependency-converter-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dependecy_converter" type="462c0819:PsiDirectoryNode" />
+              <item name="transformer" type="462c0819:PsiDirectoryNode" />
+              <item name="maven" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dependency-converter" type="b2602c69:ProjectViewProjectNode" />
@@ -284,28 +293,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dependency-converter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dependency-converter" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="dependency-converter-frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dependency-converter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dependency-converter" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="dependency-converter-frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dependency-converter" type="b2602c69:ProjectViewProjectNode" />
@@ -345,6 +332,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="Dis&#9;PSI&#9;JAVA://edu.elte.dependencyconverter.frontend.config.DispatcherConfig" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
@@ -486,16 +474,15 @@
       <updated>1530036510404</updated>
       <workItem from="1530036514457" duration="2856000" />
       <workItem from="1530124961455" duration="2980000" />
-      <workItem from="1530342985010" duration="2277000" />
+      <workItem from="1530342985010" duration="3614000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9404000" />
+    <option name="totallyTimeSpent" value="10741000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="23" width="1550" height="848" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="23" width="1550" height="848" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -510,7 +497,7 @@
       <window_info anchor="right" id="JSF" order="3" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3659864" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3659864" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
@@ -542,14 +529,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/java/edu/elte/dependencyconverter/frontend/controller/MavenController.java</url>
-          <line>31</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="4" />
     </breakpoint-manager>
   </component>
@@ -822,13 +801,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/java/edu/elte/dependencyconverter/frontend/controller/MavenController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="57" column="56" lean-forward="true" selection-start-line="57" selection-start-column="56" selection-end-line="57" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/webapp/js/FileSaver..js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -841,8 +813,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/webapp/WEB-INF/views/maven.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+        <state relative-caret-position="234">
+          <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/java/edu/elte/dependencyconverter/frontend/config/DispatcherConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/dependency-converter-api/src/main/java/edu/elte/dependecy_converter/dependecy_converter/facade/MavenFadace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/dependency-converter-frontend/src/main/java/edu/elte/dependencyconverter/frontend/controller/MavenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3">
+          <caret line="33" column="68" lean-forward="true" selection-start-line="33" selection-start-column="68" selection-end-line="33" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/dependency-converter-api/src/main/java/edu/elte/dependecy_converter/dependecy_converter/reader/gradle/GradlePluginReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/dependency-converter-api/src/main/java/edu/elte/dependecy_converter/dependecy_converter/transformer/gradle/GradleDependencyTransformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/dependency-converter-api/src/main/java/edu/elte/dependecy_converter/dependecy_converter/transformer/gradle/GradleProjectTransformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="76" lean-forward="true" selection-start-column="76" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/dependency-converter-api/src/main/java/edu/elte/dependecy_converter/dependecy_converter/transformer/maven/MavenDependencyTransformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
         </state>
       </provider>
     </entry>
