@@ -1,4 +1,4 @@
-package edu.elte.dependencyconverter.backend.config;
+package edu.elte.dependencyconverter.frontend.config;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;

@@ -1,4 +1,4 @@
-package edu.elte.dependencyconverter.backend.config;
+package edu.elte.dependencyconverter.frontend.config;
 
 import org.springframework.context.annotation.Configuration;
 

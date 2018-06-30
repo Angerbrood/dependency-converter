@@ -1,4 +1,4 @@
-package edu.elte.dependencyconverter.backend.controller;
+package edu.elte.dependencyconverter.frontend.controller;
 
 import edu.elte.dependecy_converter.dependecy_converter.domain.gradle.GradleProject;
 import edu.elte.dependecy_converter.dependecy_converter.domain.maven.MavenProject;
@@ -7,7 +7,7 @@ import edu.elte.dependecy_converter.dependecy_converter.transformer.gradle.Gradl
 import edu.elte.dependecy_converter.dependecy_converter.utils.StringUtils;
 import edu.elte.dependecy_converter.dependecy_converter.writer.FileService;
 import edu.elte.dependecy_converter.dependecy_converter.writer.maven.MavenProjectWriter;
-import edu.elte.dependencyconverter.backend.form.view.ConverterFormView;
+import edu.elte.dependencyconverter.frontend.form.view.ConverterFormView;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,6 +23,11 @@ public class GradleController {
     public ModelAndView uploadGradle(@ModelAttribute("gradleConversationFormView") ConverterFormView  gradleConversationFormView) {
         ModelAndView modelAndView = new ModelAndView("gradle");
         ConverterFormView result = new ConverterFormView();
+        if(gradleConversationFormView.getRawInputLines().isEmpty()) {
+            result.setErrorMessage("Input cannot be empty");
+            modelAndView.addObject("gradleConversationFormView", result);
+            return modelAndView;
+        }
         result.setRawInputLines(gradleConversationFormView.getRawInputLines());
 
 

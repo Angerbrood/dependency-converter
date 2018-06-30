@@ -18,6 +18,9 @@
       <div align="center">
         <div class="inline-div">
             <p align="center">pom.xml</p>
+            <div th:if="${mavenConversationFormView.errorMessage} != null" class="alert alert-danger">
+                <span th:text="${mavenConversationFormView.errorMessage}"></span>
+            </div>
 			<form action="#" th:action="@{/uploadMaven}" th:object="${mavenConversationFormView}" method="POST">
 				<textarea cols="70" rows="15" class="inline-txtarea" th:field="*{rawInputLines}"></textarea>
 	            <br />
@@ -26,7 +29,7 @@
         </div>
         <div class="inline-div">
         <p align="center">build.gradle</p>
-			<form action="#" th:object="${mavenConversationFormView}">
+			<form action="#" th:action="@{/downloadMaven}" th:object="${mavenConversationFormView}" method="GET">
 				<textarea cols="70" rows="15" class="inline-txtarea" th:field="*{rawConversationResult}" disabled readonly></textarea>
 	            <br />
 	            <input type="submit" class="btn btn-primary" value="Download" />

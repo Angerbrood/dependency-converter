@@ -18,6 +18,9 @@
          <div align="center">
              <div class="inline-div">
                  <p align="center">build.gradlel</p>
+                 <div th:if="${gradleConversationFormView.errorMessage} != null" class="alert alert-danger">
+                     <span th:text="${gradleConversationFormView.errorMessage}"></span>
+                 </div>
                  <form action="#" th:action="@{/uploadGradle}" th:object="${gradleConversationFormView}" method="POST">
                      <textarea cols="70" rows="15" class="inline-txtarea" th:field="*{rawInputLines}"></textarea>
                      <br />

@@ -1,4 +1,4 @@
-package edu.elte.dependencyconverter.backend.config;
+package edu.elte.dependencyconverter.frontend.config;
 
 import java.util.Locale;
 
@@ -26,7 +26,7 @@ import org.thymeleaf.templateresolver.ITemplateResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("edu.elte.dependencyconverter.backend.controller")
+@ComponentScan("edu.elte.dependencyconverter.frontend.controller")
 public class DispatcherConfig extends WebMvcConfigurerAdapter implements ApplicationContextAware {
 	
 	

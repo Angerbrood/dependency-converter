@@ -1,11 +1,11 @@
-package edu.elte.dependencyconverter.backend.controller;
+package edu.elte.dependencyconverter.frontend.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import edu.elte.dependencyconverter.backend.form.view.ConverterFormView;
+import edu.elte.dependencyconverter.frontend.form.view.ConverterFormView;
 
 @Controller
 public class RootController {
@@ -29,4 +29,6 @@ public class RootController {
 	public ModelAndView getManual() {
 		return new ModelAndView("manual");
 	}
+
+	
 }
